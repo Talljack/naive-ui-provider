@@ -1,0 +1,7 @@
+node_modules
+dist/
+test
+build/
+tests/unit/coverage
+public/**/*.js
+/**/*.md

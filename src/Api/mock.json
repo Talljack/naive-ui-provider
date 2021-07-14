@@ -1,0 +1,10 @@
+{
+  "result": {
+    "arr": [1, 2, 3],
+    "obj": {
+      "name": "yugang",
+      "weight": 110
+    }
+  },
+  "success": false
+}

@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import naiveUI from 'naive-ui'
 import router from './router/router'
-import App from './App.vue'
+import Provider from './components/Provider.vue'
 
-createApp(App).use(router).use(naiveUI).mount('#app')
+createApp(Provider).use(router).use(naiveUI).mount('#app')
