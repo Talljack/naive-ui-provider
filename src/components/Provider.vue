@@ -1,7 +1,8 @@
 <template>
   <n-config-provider
     class="demo"
-    :locale="enUS"
+    :locale="lang"
+    :theme="theme"
     :theme-overrides="themeOverrides"
   >
     <n-dialog-provider>
@@ -18,8 +19,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { NConfigProvider, NMessageProvider, NDialogProvider, NNotificationProvider, NLoadingBarProvider, enUS, GlobalThemeOverrides } from 'naive-ui'
+import {
+	NConfigProvider,
+	NMessageProvider,
+	NDialogProvider,
+	NNotificationProvider,
+	NLoadingBarProvider,
+	GlobalThemeOverrides
+} from 'naive-ui'
 import App from '../App.vue'
+import useConfig from '@/hooks/useConfig'
 
 const themeOverrides: GlobalThemeOverrides = {
 	common: {
@@ -35,8 +44,10 @@ export default defineComponent({
 	name: 'Provider',
 	components: { App, NConfigProvider, NMessageProvider, NDialogProvider, NNotificationProvider, NLoadingBarProvider, },
 	setup () {
+		const { theme, lang, } = useConfig()
 		return {
-			enUS,
+			theme,
+			lang,
 			themeOverrides,
 		}
 	},
