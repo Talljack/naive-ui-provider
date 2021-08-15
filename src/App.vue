@@ -55,7 +55,6 @@ import {
 	useDialog,
 	useNotification,
 	useLoadingBar,
-	LoadingBarProviderInst,
 	MenuOption
 } from 'naive-ui'
 import { LAYOUT_ITEMS } from '@/constant/constant'
@@ -70,7 +69,7 @@ export default defineComponent({
 		window.$message = useMessage()
 		window.$dialog = useDialog()
 		window.$notification = useNotification()
-		window.$loadingBar = useLoadingBar() as LoadingBarProviderInst
+		window.$loadingBar = useLoadingBar()
 		const layoutOptions = ref<MenuOption[]>(LAYOUT_ITEMS)
 		const collapsed = ref(false)
 		const activeName = ref('/')
