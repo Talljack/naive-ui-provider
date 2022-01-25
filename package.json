@@ -2,13 +2,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
-    "@vicons/fluent": "^0.1.0",
-    "@vicons/ionicons-v4": "0.0.4",
-    "@vicons/ionicons5": "^0.7.0",
     "naive-ui": "^2.16.2",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10"
